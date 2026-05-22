@@ -1,6 +1,6 @@
 # --- AION-FSCM DETERMINISTIC SHIELD ---
 
-# 1. System-Backups & Umgebung (Schutz der AION-Kerne)
+# 1. System Backups & Environment (Core IP Protection)
 .env
 *.tar.gz
 *.zip
@@ -10,7 +10,7 @@
 /backup/*
 /quarantine/*
 
-# 2. Build-Artefakte & EDA-Tools
+# 2. Build Artifacts & EDA Tools (State Cleanup)
 /build/
 /bin/
 /obj/
@@ -19,19 +19,22 @@
 *.tmp
 *.bak
 
-# 3. Lokale Konfigurationen & IDE-Noise
+# 3. Local Configurations & IDE Noise (Entropy Prevention)
 .vscode/
 .idea/
 *.swp
 .DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# 4. Dokumentations-Artefakte
-# Nur finale Beweise zulassen, kein experimentelles Rauschen
+# 4. Documentation Artifacts
+# Allow only finalized proofs, suppress raw experimental noise
 docs/evidence/raw_data/
 !docs/evidence/README.md
 
-# 5. Lock-Files (Vermeidung von Dependency-Drift)
-# Wir nutzen keine instabilen Dependencies
+# 5. Lock Files (Elimination of Dependency Drift)
+# Strict versioning via static architecture; no dynamic dependency tracking
 package-lock.json
 yarn.lock
 poetry.lock
